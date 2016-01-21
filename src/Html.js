@@ -5,6 +5,7 @@ const cdn = '//cdnjs.cloudflare.com/ajax/libs/';
 
 const title = "test";
 const description = "test";
+const facebookURL = "https://www.facebook.com/WatchOutTW";
 
 export default class Html extends Component {
   static propTypes = {
@@ -26,8 +27,8 @@ export default class Html extends Component {
           <meta property="og:description" content={description}/>
           <meta property="og:image" content="http://wevote.tw/facebook.jpg"/>
           <meta property="og:type" content="website"/>
-          <meta property="article:publisher" content="https://www.facebook.com/WatchOutTW"/>
-          <meta property="article:author" content="https://www.facebook.com/WatchOutTW"/>
+          <meta property="article:publisher" content={facebookURL}/>
+          <meta property="article:author" content={facebookURL}/>
           
           {DocumentMeta.renderAsReact()}
 
