@@ -1,0 +1,11 @@
+@import '../../common.scss';
+.innerWrap {
+  text-align: center;
+}
+.home {
+  position: relative;
+}
+.invisible {
+  max-height: 0;
+  overflow: hidden;
+}

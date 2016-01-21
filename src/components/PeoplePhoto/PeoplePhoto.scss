@@ -1,0 +1,13 @@
+@import '../../common.scss';
+.peoplePhoto {
+  display: inline-block;
+  max-width: 160px;
+  max-height: 160px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.peoplePhoto > img {
+  width: 100%;
+}

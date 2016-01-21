@@ -1,0 +1,165 @@
+@import '../../common.scss';
+@import '../../styles/innerTag.scss';
+
+$breakLarge: 1400px;
+.wrap {
+	margin: 0;
+}
+.about {
+	height: 360px;
+	background-color: $awesomeColor;
+	background-image: url('./images/about-background.svg');
+	background-position: center center;
+	background-size: auto 100%;
+	background-repeat: repeat-x;
+	margin-bottom: 60px;
+	position: relative;
+}
+.aboutImage {
+	display: block;
+	height: 100%;
+	background-image: url('./images/about-narrow.png');
+	background-position: center bottom;
+	background-size: 400px;
+	background-repeat: no-repeat;
+}
+.aboutTitle {
+	position: absolute;
+	top: 15%;
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: $trueWhite;
+	span {
+		display: block;
+	}
+}
+@media all and (max-width: 400px) {
+	.aboutImage {
+		background-size: contain;
+	}
+}
+@media all and (min-width: 640px) {
+	.about {
+		height: 300px;
+	}
+	.aboutImage {
+		background-image: url('./images/about.png');
+		background-size: contain;
+	}
+	.aboutTitle {
+		display: none;
+	}
+}
+.title {
+	text-align: center;
+	font-size: 40px;
+	width: 100%;
+	margin: 70px auto 0 auto;
+	display: inline-block;
+}
+
+@media all and (min-width: $breakLarge){
+	.about {
+		height: 400px;
+	}
+	.title {
+		margin-top: 100px;
+	}
+}
+
+
+/* main content */
+.content {
+	max-width: 560px;
+	padding: 40px;
+	margin: 0 auto 40px;
+	line-height: 1.5;
+
+	h2 {
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+	}
+	p {
+		font-size: 16px;
+	}
+}
+@media all and (min-width: 800px){
+	.content {
+		width: 100%;
+	}
+}
+// reminder
+.reminderCard {
+	border: 3px solid $black;
+	background: $trueWhite;
+	margin: 40px 0;
+	padding: 20px;
+
+	> :first-child, > :last-child {
+		margin: 0;
+		text-align: center;
+	}
+}
+
+/* License */
+.licenseBlock {
+//	line-height: 1.5;
+}
+.licenseImg {
+	max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 50px;
+}
+@media all and (min-width: 800px){
+	.licenseImg {
+	}
+}
+/* for the Video */
+.aboutWrap {
+	position: relative;
+}
+
+
+/* roadmap */
+.roadmap {
+  width: 100%;
+  text-align: center;
+  background: rgba($awesomeColor, 0.15);
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.15);
+
+  > .stage {
+    display: inline-block;
+    vertical-align: top;
+    height: 240px;
+    width: 320px;
+    margin: 0 20px;
+    background-image: url('./images/roadmap-01.png');
+    background-position: 0 0;
+    background-size: auto 100%;
+
+    &.october, &.november {
+      height: 200px;
+      background-size: auto 240px;
+    }
+    &.october {
+      width: 222px;
+      background-position: -34px 0;
+    }
+    &.november {
+      width: 177px;
+      background-position: -283px 0;
+    }
+    &.december {
+      width: 247px;
+      background-position: -478px 0;
+    }
+    &.january {
+      width: 231px;
+      background-position: -746px 0;
+    }
+  }
+}
